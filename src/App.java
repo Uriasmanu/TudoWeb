@@ -1,44 +1,33 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
-public class App {
+public class PesquisaDeOpiniao {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int excelenteCount = 0;
+        int ruimCount = 0;
 
-        String nome, opniao;
-        int idade, excelente, ruim;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Entrevistado " + i);
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
+            System.out.print("Idade: ");
+            int idade = scanner.nextInt();
+            scanner.nextLine();  // Limpar o buffer de entrada
+            System.out.print("Opinião (1-EXCELENTE, 2-BOM, 3-RUIM): ");
+            int opiniao = scanner.nextInt();
+            scanner.nextLine();  // Limpar o buffer de entrada
 
-        excelente = 0;
-        ruim = 0;
-
-        JOptionPane.showMessageDialog(null, "Seja bem-vindo(a) à TudoWeb");
-
-        for (int i = 0; i < 10; i++) {
-            nome = JOptionPane.showInputDialog(null, "Por gentileza, digite o seu nome:");
-            idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Por gentileza, digite a sua idade:"));
-
-            opniao = JOptionPane.showInputDialog(null, "Sr(a). " + nome + ", poderia nos dar a sua opinião sobre o nosso site:" + "\n1 - Excelente"
-                    + "\n3 - Ruim");
-
-            int opniaoInt = Integer.parseInt(opniao);
-
-            switch (opniaoInt) {
-                case 1:
-                    JOptionPane.showMessageDialog(null, "Você escolheu a opção 1. Excelente");
-                    excelente = excelente + 1;
-                    break;
-
-                case 3:
-                    JOptionPane.showMessageDialog(null, "Você escolheu a opção 3 - Ruim");
-                    ruim = ruim + 1;
-                    break;
-
-                default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida");
-                    break;
+            if (opiniao == 1) {
+                excelenteCount++;
+            } else if (opiniao == 3) {
+                ruimCount++;
             }
-
         }
 
-        JOptionPane.showMessageDialog(null, "Resultados:\nExcelente: " + excelente + "\nRuim: " + ruim);
+        System.out.println("\nResultados da pesquisa:");
+        System.out.println("Quantidade de respostas \"EXCELENTE\": " + excelenteCount);
+        System.out.println("Quantidade de respostas \"RUIM\": " + ruimCount);
 
+        scanner.close();
     }
 }
