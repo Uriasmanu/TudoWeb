@@ -14,7 +14,9 @@ public class App {
         opniao = JOptionPane.showInputDialog(null, "Sr(a)." + nome + "poderia nos dar a sua opnião sobre o nosso site:" + "\n1 - Exelente" +
         "\n2 - Bom" + "\n3 - Ruim");
 
-        switch(opniao){
+        int opniaoInt = Integer.parseInt (opniao);
+
+        switch(opniaoInt){
             case 1:
                 JOptionPane.showMessageDialog(null,"Você escolheu a opção 1. Exelente");
                 break;
