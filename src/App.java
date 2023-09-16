@@ -11,7 +11,7 @@ public class App {
 
         JOptionPane.showMessageDialog(null, "Seja bem-vindo(a) a TudoWeb");
 
-        for (int i = 0; i <= 10; i++) { // Correção aqui: ponto e vírgula em vez de vírgula
+        for (int i = 1; i <= 10; i++) { // Correção aqui: ponto e vírgula em vez de vírgula
 
             nome = JOptionPane.showInputDialog(null, "Por gentileza digite o seu nome:");
             idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Por gentileza digite o sua idade:"));
@@ -23,16 +23,16 @@ public class App {
 
             switch (opniaoInt) {
                 case 1:
-                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 1. Excelente");
+                    JOptionPane.showMessageDialog(null, "Entrevistado " + i + " escolheu a opção 1. Excelente");
                     exelente = exelente + 1;
                     break;
 
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 2 - Bom");
+                    JOptionPane.showMessageDialog(null, "Entrevistado " + i + " escolheu a opção 2 - Bom");
                     break;
 
                 case 3:
-                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 3 - Ruim");
+                    JOptionPane.showMessageDialog(null, "Entrevistado " + i + " escolheu a opção 3 - Ruim");
                     ruim = ruim + 1;
                     break;
 
@@ -44,7 +44,7 @@ public class App {
         }
 
         // Após o loop, você pode exibir os resultados, por exemplo:
-        JOptionPane.showMessageDialog(null, "Resultados:\nExcelente: " + exelente + " \nRuim" + ruim);
+        JOptionPane.showMessageDialog(null, "Resultados:\nExcelente: " + exelente + " \nRuim: " + ruim);
 
     }
 }
