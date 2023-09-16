@@ -24,17 +24,16 @@ public class App {
 
             switch (opniaoInt) {
                 case 1:
-                    JOptionPane.showMessageDialog(null, "Você escolheu a opção 1. Excelente");
+                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 1. Excelente");
                     exelente = exelente + 1;
                     break;
 
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Você escolheu a opção 2 - Bom");
-                    bom = bom + 1;
+                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 2 - Bom");
                     break;
 
                 case 3:
-                    JOptionPane.showMessageDialog(null, "Você escolheu a opção 3 - Ruim");
+                    JOptionPane.showMessageDialog(null, "Entrevistado" + i + "escolheu a opção 3 - Ruim");
                     ruim = ruim + 1;
                     break;
 
@@ -46,7 +45,7 @@ public class App {
         }
 
         // Após o loop, você pode exibir os resultados, por exemplo:
-        JOptionPane.showMessageDialog(null, "Resultados:\nExcelente: " + exelente + "\nBom: " + bom + "\nRuim: " + ruim);
+        JOptionPane.showMessageDialog(null, "Resultados:\nExcelente: " + exelente + " \nRuim" + ruim);
 
     }
 }
